@@ -7,7 +7,7 @@ const {
     bill,
     drivers,
     riders,
-} = require("./geektrust");
+} = require("./geektrust-test");
 
 describe("Ride Sharing App", () => {
     

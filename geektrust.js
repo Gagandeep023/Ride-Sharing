@@ -1,50 +1,50 @@
-// const fs = require("fs")
+const fs = require("fs")
 
-// const filename = process.argv[2]
+const filename = process.argv[2]
 
-// if (!filename) {
-//     // console.error('Please provide a filename as an input')
-//     process.exit(1)
-//   }
+if (!filename) {
+    // console.error('Please provide a filename as an input')
+    process.exit(1)
+  }
 
-// fs.readFile(filename, "utf8", (err, data) => {
-//     if (err) throw err
-//     let inputLines = data.toString().split("\n")
-//     inputLines.forEach(command => {
-//         const tokens = command.trim().split(' ');
-//         const commandName = tokens[0];
-//         switch (commandName) {
-//             case 'ADD_DRIVER':
-//                 addDriver(tokens[1], tokens[2], tokens[3]);
-//                 break;
+fs.readFile(filename, "utf8", (err, data) => {
+    if (err) throw err
+    let inputLines = data.toString().split("\n")
+    inputLines.forEach(command => {
+        const tokens = command.trim().split(' ');
+        const commandName = tokens[0];
+        switch (commandName) {
+            case 'ADD_DRIVER':
+                addDriver(tokens[1], tokens[2], tokens[3]);
+                break;
 
-//             case 'ADD_RIDER':
-//                 addRider(tokens[1], tokens[2], tokens[3]);
-//                 console.log(tokens[1], tokens[2], tokens[3]);
-//                 break;
+            case 'ADD_RIDER':
+                addRider(tokens[1], tokens[2], tokens[3]);
+                console.log(tokens[1], tokens[2], tokens[3]);
+                break;
 
-//             case 'MATCH':
-//                 match(tokens[1]);
-//                 break;
+            case 'MATCH':
+                match(tokens[1]);
+                break;
 
-//             case 'START_RIDE':
-//                 startRide(tokens[1], tokens[2], tokens[3]);
-//                 break;
+            case 'START_RIDE':
+                startRide(tokens[1], tokens[2], tokens[3]);
+                break;
 
-//             case 'STOP_RIDE':
-//                 stopRide(tokens[1], tokens[2], tokens[3], tokens[4]);
-//                 break;
+            case 'STOP_RIDE':
+                stopRide(tokens[1], tokens[2], tokens[3], tokens[4]);
+                break;
 
-//             case 'BILL':
-//                 bill(tokens[1]);
-//                 break;
+            case 'BILL':
+                bill(tokens[1]);
+                break;
 
-//             default:
-//                 console.log('INVALID_COMMAND');
-//                 break;
-//         }
-//     });
-// })
+            default:
+                console.log('INVALID_COMMAND');
+                break;
+        }
+    });
+})
 
 
 let drivers = {};
