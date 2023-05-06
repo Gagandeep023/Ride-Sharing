@@ -1,0 +1,16 @@
+{
+  "name": "geektrust",
+  "version": "1.0.0",
+  "description": "geektrust-project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node geektrust.js",
+    "test": "jest"
+  },
+  "author": "geektrust",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "mocha": "^10.0.0"
+  }
+}
